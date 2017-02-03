@@ -1,0 +1,32 @@
+{
+  "name": "intl-datetime-parser",
+  "version": "0.0.1",
+  "description": "Parse the date strings, formatted by the Intl.DateTimeFormat (ECMAScript Internationalization API)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightskylark/intl-datetime-parser.git"
+  },
+  "keywords": [
+    "ecma",
+    "intl",
+    "date",
+    "datetime",
+    "datetimeformat",
+    "parse",
+    "parser"
+  ],
+  "author": {
+    "name" : "Evgeny Zhavoronkov",
+    "email" : "eugen@skyness.me",
+    "url" : "http://skyness.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nightskylark/intl-datetime-parser/issues"
+  },
+  "homepage": "https://github.com/nightskylark/intl-datetime-parser#readme"
+}
