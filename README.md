@@ -1,3 +1,5 @@
+[![Run Status](https://api.shippable.com/projects/5894e31d2ec8a80f004d5dd1/badge?branch=master)](https://app.shippable.com/projects/5894e31d2ec8a80f004d5dd1)
+
 # intl-datetime-parser
 
 Parse the date strings, formatted by the Intl.DateTimeFormat (ECMAScript Internationalization API)
