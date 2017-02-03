@@ -4,7 +4,7 @@
   "description": "Parse the date strings, formatted by the Intl.DateTimeFormat (ECMAScript Internationalization API)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -20,13 +20,16 @@
     "parser"
   ],
   "author": {
-    "name" : "Evgeny Zhavoronkov",
-    "email" : "eugen@skyness.me",
-    "url" : "http://skyness.me"
+    "name": "Evgeny Zhavoronkov",
+    "email": "eugen@skyness.me",
+    "url": "http://skyness.me"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nightskylark/intl-datetime-parser/issues"
   },
-  "homepage": "https://github.com/nightskylark/intl-datetime-parser#readme"
+  "homepage": "https://github.com/nightskylark/intl-datetime-parser#readme",
+  "devDependencies": {
+    "intl": "^1.2.5"
+  }
 }
