@@ -1,0 +1,24 @@
+# Language setting
+language: node_js
+
+# Version number
+node_js:
+  - 0.12
+
+build:
+  pre_ci_boot:
+    image_name: drydock/u14nod
+    image_tag: prod
+    pull: true
+
+  ci:
+    - npm install
+
+  post_ci:
+    - ls -a
+    - pwd
+
+  cache: true
+
+  cache_dir_list: 
+    - $SHIPPABLE_BUILD_DIR/node_modules
