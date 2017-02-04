@@ -11,10 +11,17 @@ function assert(value, expected, message) {
     }
 }
 
-let locale = 'en';
-let intlFormat = { year: 'numeric', timeZone: 'UTC' };
-let testDate = new Date(Date.UTC(2015, 0, 1));
-let dateString = new IntlPolyfill.DateTimeFormat(locale, intlFormat).format(testDate)
-let comment = [locale, JSON.stringify(intlFormat)].join(' ');
 
-assert(new IntlDateTimeParser(locale, intlFormat).parse(dateString).toISOString(), testDate.toISOString(), comment);
+const localeDataFolder = './node_modules/intl/locale-data/jsonp/';
+const fs = require('fs');
+fs.readdir(localeDataFolder, (err, localeFiles) => {
+    localeFiles.forEach(localeFile => {
+        let locale = localeFile.substr(0, localeFile.length - 3);
+        let intlFormat = { year: 'numeric', timeZone: 'UTC' };
+        let testDate = new Date(Date.UTC(2015, 0, 1));
+        let dateString = new IntlPolyfill.DateTimeFormat(locale, intlFormat).format(testDate)
+        let comment = [locale, JSON.stringify(intlFormat), dateString].join(' ');
+
+        assert(new IntlDateTimeParser(locale, intlFormat, IntlPolyfill).parse(dateString).toISOString(), testDate.toISOString(), comment);
+    });
+})
